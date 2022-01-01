@@ -478,7 +478,7 @@ public class Scene extends JPanel {
 		if(this.score.getNbrePieces() <= 1 ){
 			g2.drawString(this.score.getNbrePieces() + " Coin found out of " + this.score.getNOMBRE_TOTAL_PIECES(), 490, 25);
 		}else{
-			g2.drawString(this.score.getNbrePieces() + " Coins found out of " + this.score.getNOMBRE_TOTAL_PIECES(), 490, 25);
+			g2.drawString(this.score.getNbrePieces() + " Coins found out of " + this.score.getNOMBRE_TOTAL_PIECES(), 480, 25);
 		}
 		
 		//Mise a jour du temps restant du jeu
@@ -487,7 +487,7 @@ public class Scene extends JPanel {
 		
 		//Fin de partie
 		if(this.finDePartie() == true){
-			Font policeFin = new Font("Snap ITC", Font.BOLD, 50);
+			Font policeFin = new Font("Astrolyte", Font.BOLD, 50);
 			g2.setFont(policeFin);
 			g2.setColor(Color.decode("#55B25A"));
 			if(this.partieGagnee() == true){
@@ -495,7 +495,7 @@ public class Scene extends JPanel {
 				g2.drawString("WELCOME AT ULKT", 30, 120);
 				this.compteARebours.arretTemps();
 			}else{
-				g2.drawString("Game Over !", 150, 180);
+				g2.drawString("Game Over !", 177, 180);
 				this.compteARebours.arretTemps();
 			}
 		}
@@ -505,7 +505,7 @@ public class Scene extends JPanel {
 			//Temps epouise
 			if(this.compteARebours.getCompteurTemps() <= 0){
 				cyclops.meurt();
-				Font cast = new Font("Snap ITC", Font.BOLD, 25);
+				Font cast = new Font("Astrolyte", Font.BOLD, 25);
 				g2.setFont(cast);
 				g2.drawString("Time Up", 287, 100);
 			}
@@ -533,12 +533,12 @@ public class Scene extends JPanel {
 				
 			//Partie perdue
 			}else{
-				Font cast = new Font("Bookman Old Style", Font.BOLD, 13);
+				Font cast = new Font("Astrolyte", Font.BOLD, 13);
 				g2.setFont(cast);
 				g2.setColor(Color.decode("#569d58"));
 				g2.drawString("Game Designer: ......... Akilimali Vijey", 220, 200);
 				g2.drawString("Programmer: ......... Akilimali Vijey", 228, 215);
-				g2.drawString("Graphic Designer: ......... Rachel Kamundala", 202, 230);
+				g2.drawString("Graphic Designer: ......... Clarice Godwin Akilimali", 170, 230);
 				g2.drawString("Sound Designer: ......... Yefta Dan", 235, 245);
 				g2.drawString("Manager: ......... Zacharie Boroto", 237, 260);
 			}
